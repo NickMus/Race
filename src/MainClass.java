@@ -1,6 +1,5 @@
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
-import java.util.concurrent.Semaphore;
 
 public class MainClass {
     public static final int CARS_COUNT = 4;
@@ -27,13 +26,13 @@ public class MainClass {
                     e.printStackTrace();
                 }
 
-               // System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка началась!!!");
+
 
                 for (int y = 0; y < race.getStages().size(); y++) {
                     race.getStages().get(y).go(cars[w - 1]);
                 }
             }).start();
-
+            System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка началась!!!");
         }
         System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка закончилась!!!");
     }
