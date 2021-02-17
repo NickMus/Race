@@ -30,43 +30,7 @@ public class Car implements Runnable {
 
     @Override
     public void run() {}
-//
-//        Semaphore smp = new Semaphore(0);
-//
-//
-//
-//        new Thread(() -> {
-//            CyclicBarrier cb = new CyclicBarrier(4);
-//            try {
-//                smp.acquire();
-//                System.out.println(this.name + " готовится");
-//                Thread.sleep(500 + (int) (Math.random() * 800));
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//            System.out.println(this.name + " готов");
-//            try {
-//                cb.await();
-//            } catch (InterruptedException | BrokenBarrierException e) {
-//                e.printStackTrace();
-//            }
-//        }).start();
-//
-//
-//        new Thread(() -> {
-//            try {
-//                smp.acquire();
-//                for (int i = 0; i < race.getStages().size(); i++) {
-//                    race.getStages().get(i).go(this);
-//                }
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            } finally {
-//                smp.release();
-//            }
-//
-//        }).start();
-//    }
+
 }
 
 
